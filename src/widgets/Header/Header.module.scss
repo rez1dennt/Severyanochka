@@ -1,0 +1,190 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-white);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 72px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  min-width: 0;
+}
+
+.logo {
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.catalogBtn {
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.burger {
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+  display: inline-block;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+  }
+  
+  &::before { top: -6px; }
+  &::after { top: 6px; }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.action {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  
+  color: var(--black-100);
+  
+  &:hover {
+    color: var(--color-orange);
+  }
+}
+
+.actionIcon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.actionText {
+  color: var(--grey-100);
+}
+
+.cartIconWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.badge {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  
+  height: 16px;
+  padding: 0 5px;
+  border-radius: 100%;
+  background: var(--accent);
+  color: var(--bg-surface);
+  
+  font-size: 8px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.user {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  
+  &:hover {
+    background: rgba(0,0,0,0.04);
+  }
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+.userName {
+  color: var(--black-100);
+  white-space: nowrap;
+}
+
+.chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--grey-100);
+  border-bottom: 2px solid var(--grey-100);
+  transform: rotate(45deg);
+  margin-left: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .actionText { display: none; }
+  .userName { display: none; }
+}
+
+@media (max-width: 600px) {
+  .user {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .header {
+    position: relative;
+  }
+  
+    .left {
+      width: 100%;
+    }
+    
+    .catalogBtn {
+      margin-left: auto; /* ← ВОТ ЭТО КЛЮЧ */
+    }
+  
+  
+  
+  .right {
+    display: none;
+  }
+}
+
+
+
+

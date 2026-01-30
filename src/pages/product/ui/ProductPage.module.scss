@@ -1,0 +1,293 @@
+
+.actionBtnActive {
+  color: var(--accent);
+}
+
+.actionBtnActive img {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(74%) saturate(2227%) hue-rotate(350deg)
+  brightness(99%) contrast(101%);
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.loader::after,
+.loader::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border: 2px solid #6ebeff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  animation: rotation 2s ease-in-out infinite;
+}
+.loader::after {
+  border-color: #337AB7;
+  animation-delay: 1s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  flex-wrap: nowrap;
+}
+
+.crumb {
+  color: var(--text-primary);
+}
+
+.crumbLast {
+  display: flex;
+  align-items: center;
+}
+
+.sep {
+  color: var(--text-muted);
+}
+
+.title {
+  margin: 8px 0 16px;
+  color: var(--text-primary);
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 376px;
+  gap: 24px;
+  align-items: start;
+}
+
+.buyBox {
+  width: 100%;
+  max-width: 376px;
+  
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.priceCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.priceColRight {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: flex-end;
+  text-align: right;
+}
+
+.oldLabel {
+  color: var(--text-secondary);
+}
+
+.oldPrice {
+  color: var(--text-primary);
+}
+
+.priceHint {
+  color: var(--text-secondary);
+}
+
+.price {
+  color: var(--text-primary);
+}
+
+.priceRight {
+  text-align: right;
+  
+}
+
+
+.bonusRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0 8px;
+}
+
+.bonusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--brand-primary);
+}
+
+.bonusText {
+  
+  color: var(--brand-primary);
+}
+
+.notifyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  cursor: pointer;
+  color: var(--text-secondary);
+  text-align: left;
+  
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.table {
+  margin-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tdLeft {
+  color: var(--text-secondary);
+}
+
+.tdRight {
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.sectionTitle {
+  margin: 32px 0 16px;
+  color: var(--text-primary);
+}
+
+.relatedGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+
+.subRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 8px 0 16px;
+}
+
+.art {
+  color: var(--text-primary);
+}
+
+.rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+}
+
+.oldPriceBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--accent);
+}
+
+.reviewsLink {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-secondary);
+  
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  
+  color: var(--text-secondary);
+  
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .topGrid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 20px;
+  }
+  
+  .buyBox {
+    max-width: 320px;
+    padding: 0;
+  }
+  .breadcrumbs {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buyBox {
+    max-width: 100%;
+  }
+}
+

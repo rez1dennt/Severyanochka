@@ -1,0 +1,23 @@
+.text {
+  margin: 0;
+  font-family: var(--font-family-main);
+  color: var(--text-primary);
+}
+
+/* sizes */
+.xs { font-size: var(--fs-xs); }
+.sm { font-size: var(--fs-sm); }
+.md { font-size: var(--fs-md); }
+.lg { font-size: var(--fs-lg); }
+.xl { font-size: var(--fs-xl); }
+.xxl { font-size: var(--fs-xxl); }
+
+/* weights */
+.regular { font-weight: var(--fw-regular); }
+.medium  { font-weight: var(--fw-medium); }
+.bold    { font-weight: var(--fw-bold); }
+
+/* line-heights */
+.tight { line-height: var(--lh-tight); }
+.base  { line-height: var(--lh-base); }
+.loose { line-height: var(--lh-loose); }

@@ -1,0 +1,11 @@
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--accent);
+}
+
+.star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

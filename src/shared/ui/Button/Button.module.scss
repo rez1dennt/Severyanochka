@@ -1,0 +1,193 @@
+
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  border: 1px solid transparent;
+  border-radius: var(--btn-radius, 4px);
+
+  font-family: var(--font-family-main);
+  font-size: var(--btn-fs);
+  line-height: 1.2;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+
+}
+
+.iconLeft,
+.iconRight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+
+.iconAbsolute {
+  justify-content: center;
+  padding-left: 48px;
+  padding-right: 16px;
+}
+
+.iconAbsolute .iconLeft {
+  position: absolute;
+  left: 16px;
+}
+
+.iconAbsolute .content {
+  margin: 0 auto;
+}
+
+.iconRight {
+  position: absolute;
+  right: 16px;
+}
+
+/* sizes */
+.sm {
+  padding: 10px 14px;
+  min-height: 40px;
+}
+
+.md {
+  padding: 14px 16px;
+  min-height: 52px;
+}
+
+.lg {
+  padding: 16px 20px;
+  min-height: 60px;
+  font-size: 24px;
+}
+
+/* layout */
+.fullWidth {
+  width: 100%;
+}
+
+/* variants */
+.primary {
+  background: var(--color-orange);
+  color: var(--color-white);
+
+  &:hover:not(:disabled) {
+    background: var(--color-orange-hover);
+  }
+
+  &:active:not(:disabled) {
+    background: var(--color-orange-active);
+  }
+}
+
+.secondary {
+  background: var(--color-green);
+  color: var(--color-white);
+
+  &:hover:not(:disabled) {
+    background: var(--color-green-hover);
+  }
+
+  &:active:not(:disabled) {
+    background: var(--color-green-active);
+  }
+}
+
+
+.outlineGreen {
+  background: transparent;
+  border-color: var(--color-green);
+  color: var(--color-green);
+  
+  &:hover:not(:disabled) {
+    background: var(--color-orange);
+    border-color: var(--color-orange);
+    color: var(--color-white);
+  }
+  
+  &:active:not(:disabled) {
+    background: var(--color-orange-active);
+    border-color: var(--color-orange-active);
+    color: var(--color-white);
+  }
+  
+  &:disabled {
+    border-color: var(--color-gray-200);
+    color: var(--color-gray-200);
+  }
+}
+
+.tertiary {
+  background: var(--color-orange);
+  color: var(--color-white);
+
+  &:hover:not(:disabled) {
+    background: var(--color-orange-hover);
+  }
+
+  &:active:not(:disabled) {
+    background: var(--color-orange-active);
+  }
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+
+  &:hover:not(:disabled) {
+    background: var(--color-orange);
+    color: var(--color-white);
+  }
+
+  &:active:not(:disabled) {
+    background: var(--color-orange-active);
+    border-color: var(--color-orange-active);
+    color: var(--color-white);
+  }
+
+  &:disabled {
+    border-color: var(--btn-bg-disabled);
+    color: var(--btn-text-disabled);
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-orange);
+
+  &:hover:not(:disabled) {
+    background: rgba(255, 102, 51, 0.12); /* можно вынести в токен */
+  }
+
+  &:active:not(:disabled) {
+    background: rgba(255, 102, 51, 0.2);
+  }
+}
+
+
+@media (max-width:360px) {
+  .sm { padding: 8px 12px; min-height: 36px; }
+  .md { padding: 10px 14px; min-height: 44px; }
+  .lg { padding: 12px 16px; min-height: 52px; }
+}
+
+

@@ -1,0 +1,79 @@
+.carousel {
+  position: relative;
+}
+
+
+.track {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+
+.navRow {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .track {
+    display: flex;
+    gap: 16px;
+    
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    
+    scroll-padding-inline: 20px;
+   
+  }
+  
+  .track::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  .item {
+    flex: 0 0 230px;
+    scroll-snap-align: start;
+  }
+  
+  .navRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .navBtn {
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 4px;
+    border: 1px solid rgba(112, 192, 91, 0.6);
+    background: var(--bg-surface);
+    
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    
+    color: var(--brand-primary);
+    font-size: 22px;
+    line-height: 1;
+    
+    &:hover {
+      border-color: var(--brand-primary);
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+@media (max-width: 395px) {
+  .item {
+    flex: 0 0 160px;
+  }
+}
+
+

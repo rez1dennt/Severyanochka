@@ -1,0 +1,100 @@
+.bar {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .bar {
+    position: sticky;
+    bottom: 0;
+    z-index: 60;
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    
+    background: var(--bg-surface);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    height: 56px;
+  }
+  
+  .item {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    
+    display: grid;
+    place-items: center;
+    gap: 4px;
+    
+    padding: 8px 6px;
+    color: var(--text-secondary);
+  }
+  
+  .label {
+    color: var(--text-secondary);
+  }
+  
+  .labelActive {
+    color: var(--accent);
+  }
+  
+  .icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+  
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .burger {
+    width: 18px;
+    height: 2px;
+    background: var(--accent);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+    
+      background: var(--accent);
+    }
+    
+    &::before { top: -6px; }
+    &::after { top: 6px; }
+  }
+  
+  .cartWrap {
+    position: relative;
+    display: inline-flex;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    
+    height: 16px;
+    min-width: 16px;
+    padding: 0 4px;
+    border-radius: 999px;
+    
+    background: var(--accent);
+    color: var(--bg-surface);
+    
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+  }
+}

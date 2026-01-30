@@ -1,0 +1,87 @@
+.section {
+  padding: 28px 0 40px;
+  background: transparent;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.title {
+  color: var(--text-primary);
+}
+
+.allLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  
+  text-decoration: none;
+  color: var(--text-secondary);
+  
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+
+.chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  margin-top: 1px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* <= 1024: 3 колонки */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* <= 768: ВИДНО ТОЛЬКО 3 карточки (по 224px) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+  
+  .grid > *:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+
+@media (max-width: 767px) {
+  
+  .grid {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+  .grid > *:nth-child(n + 4) {
+    display: block;
+  }
+}
+
+
+
+/* <= 360: 2 карточки по 160px */
+@media (max-width: 360px) {
+  .grid {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+}
+

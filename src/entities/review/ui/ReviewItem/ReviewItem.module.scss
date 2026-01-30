@@ -1,0 +1,44 @@
+.item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(0,0,0,0.03);
+}
+
+.content {
+  display: grid;
+  gap: 6px;
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.name {
+  color: var(--text-primary);
+}
+
+.date {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.rating {
+  color: var(--accent);
+}
+
+.text {
+  color: var(--text-secondary);
+  line-height: var(--lh-loose);
+}
